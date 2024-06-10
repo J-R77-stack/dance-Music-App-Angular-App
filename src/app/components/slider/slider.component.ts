@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { MusicService } from '../../services/music.service';
 
 @Component({
   selector: 'app-slider',
@@ -7,15 +7,17 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './slider.component.scss',
 })
 export class SliderComponent implements OnInit {
-  constructor(private http: HttpClient) {}
+  music: any;
+
+  constructor(private musicService: MusicService) {}
 
   ngOnInit() {
-    this.http
-      .get(
-        'https://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=sasha&api_key=17b2958025f35289d96cc353e38f3bb5&format=json'
-      )
-      .subscribe((data) => {
-        console.log(data);
-      });
+    this.getTopDeepHouseTracks();
+  }
+
+  getTopDeepHouseTracks() {
+    this.musicService.getTopDeepHouseTracks().subscribe((data) => {
+      this.music = data;
+    });
   }
 }
