@@ -8,6 +8,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MusicListComponent } from './pages/music-list/music-list.component';
 import { SliderComponent } from './components/slider/slider.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,13 +17,10 @@ import { SliderComponent } from './components/slider/slider.component';
     FooterComponent,
     HomeComponent,
     MusicListComponent,
-    SliderComponent
+    SliderComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
