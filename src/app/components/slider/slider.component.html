@@ -6,7 +6,7 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img
-        src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/gKkl37BQuKTanygYQG1pyYgLVgf.jpg"
+        src="https://image.tmdb.org/t/p/w500/1E5baAaEse26fej7uHcjOgEE2t2.jpg"
         class="d-block w-100"
         alt="..."
       />
@@ -18,6 +18,17 @@
     </div>
   </div>
 </div>
-<pre>
-  {{ music$ | async | json }}
-</pre>
+
+<!-- <div *ngIf="topDeepHouseTracks.length > 0">
+  <div *ngFor="let artist of topDeepHouseTracks">
+    {{ artist.name }}
+    {{ artist.artist.name }}
+  </div>
+</div> -->
+
+<div *ngIf="topSashaTracks.length > 0">
+  <div *ngFor="let artist of topSashaTracks">
+    {{ artist.name }}
+    {{ artist.artist.name }}
+  </div>
+</div>
