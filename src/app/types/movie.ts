@@ -4,13 +4,16 @@ export type Music = {
   artist: string;
   url: string;
   rank: string;
+  duration: string;
+  image: [];
+  track: string;
 };
 
 export type MusicDto = {
   page: string;
-  track: Music[];
   tag: string;
   perPage: string;
   totalPages: string;
   total: string;
+  tracks: Music[];
 };

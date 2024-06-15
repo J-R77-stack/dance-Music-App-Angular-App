@@ -25,13 +25,13 @@ export class MusicService {
     return this.http.get(url);
   }
 
-  getTopSashaTracks(): Observable<any> {
-    const url = `${this.apiUrl}?method=artist.gettoptracks&artist=sasha&api_key=${this.apiKey}&format=json`;
-    return this.http.get(url);
-  }
+  // getTopSashaTracks(): Observable<MusicDto> {
+  //   const url = `${this.apiUrl}?method=artist.gettoptracks&artist=sasha&api_key=${this.apiKey}&format=json`;
+  //   return this.http.get(url);
+  // }
 
-  getArtistInfo(artist: string): Observable<any> {
-    const url = `${this.apiUrl}?method=artist.getinfo&artist=${artist}&api_key=${this.apiKey}&format=json`;
-    return this.http.get(url);
-  }
+  // getArtistInfo(artist: string): Observable<MusicDto> {
+  //   const url = `${this.apiUrl}?method=artist.getinfo&artist=${artist}&api_key=${this.apiKey}&format=json`;
+  //   return this.http.get(url);
+  // }
 }

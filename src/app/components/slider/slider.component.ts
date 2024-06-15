@@ -8,8 +8,8 @@ import { MusicService } from '../../services/music.service';
 })
 export class SliderComponent implements OnInit {
   topDeepHouseTracks: any[] = [];
-  topSashaTracks: any[] = [];
-  artistInfo: any[] = [];
+  // topSashaTracks: any[] = [];
+  // artistInfo: any[] = [];
 
   constructor(private musicService: MusicService) {}
 
@@ -18,12 +18,12 @@ export class SliderComponent implements OnInit {
       this.topDeepHouseTracks = data.tracks.track;
     });
 
-    this.musicService.getTopSashaTracks().subscribe((data) => {
-      this.topSashaTracks = data.toptracks.track;
-    });
+    // this.musicService.getTopSashaTracks().subscribe((data) => {
+    //   this.topSashaTracks = data.toptracks.track;
+    // });
 
-    this.musicService.getArtistInfo('artist: sasha').subscribe((data) => {
-      this.artistInfo = data.artist;
-    });
+    // this.musicService.getArtistInfo('artist: sasha').subscribe((data) => {
+    //   this.artistInfo = data.artist;
+    // });
   }
 }

@@ -1,9 +1,9 @@
 <div
   id="carouselExampleAutoplaying"
   class="carousel slide"
-  data-bs-ride="carousel"
+  *ngIf="topDeepHouseTracks.length > 0"
 >
-  <div class="carousel-inner">
+  <div class="carousel-inner" *ngFor="let track of topDeepHouseTracks">
     <div class="carousel-item active">
       <img
         src="https://image.tmdb.org/t/p/w500/1E5baAaEse26fej7uHcjOgEE2t2.jpg"
@@ -12,23 +12,20 @@
       />
     </div>
     <div class="slide-pane">
-      <h2 class="title">Song title</h2>
-      <div class="artist">Artist name</div>
-      <div class="release-date">20.06.2024</div>
+      <h2 class="title">{{ track.artist.name }}</h2>
+      <div class="artist">{{ track.name }}</div>
+      <div class="top-track-position">
+        Ranking:
+        {{ track["@attr"]["rank"] }}
+      </div>
     </div>
   </div>
 </div>
 
-<!-- <div *ngIf="topDeepHouseTracks.length > 0">
-  <div *ngFor="let artist of topDeepHouseTracks">
-    {{ artist.name }}
-    {{ artist.artist.name }}
-  </div>
-</div> -->
-
-<div *ngIf="topSashaTracks.length > 0">
-  <div *ngFor="let artist of topSashaTracks">
-    {{ artist.name }}
-    {{ artist.artist.name }}
+<div *ngIf="topDeepHouseTracks.length > 0">
+  <div *ngFor="let track of topDeepHouseTracks">
+    {{ track.name }}
+    {{ track.artist.name }}
   </div>
 </div>
+data-bs-ride="carousel"
