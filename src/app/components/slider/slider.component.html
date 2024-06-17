@@ -1,31 +1,39 @@
-<div
-  id="carouselExampleAutoplaying"
-  class="carousel slide"
-  *ngIf="topDeepHouseTracks.length > 0"
->
-  <div class="carousel-inner" *ngFor="let track of topDeepHouseTracks">
+<div id="carouselExampleAutoplaying" class="carousel slide">
+  <div class="carousel-inner">
     <div class="carousel-item active">
       <img
-        src="https://image.tmdb.org/t/p/w500/1E5baAaEse26fej7uHcjOgEE2t2.jpg"
+        src="https://api.deezer.com/artist/400559/image"
         class="d-block w-100"
         alt="..."
       />
     </div>
     <div class="slide-pane">
-      <h2 class="title">{{ track.artist.name }}</h2>
-      <div class="artist">{{ track.name }}</div>
-      <div class="top-track-position">
-        Ranking:
-        {{ track["@attr"]["rank"] }}
-      </div>
+      <h2 class="title">hello</h2>
+      <div class="artist">Artist:</div>
+      <div class="ranking"></div>
     </div>
   </div>
 </div>
 
-<div *ngIf="topDeepHouseTracks.length > 0">
-  <div *ngFor="let track of topDeepHouseTracks">
-    {{ track.name }}
-    {{ track.artist.name }}
-  </div>
+<div>
+  <h2>Top Tracks</h2>
+  <ul *ngIf="topTracks.length">
+    <li *ngFor="let track of topTracks">
+      <img
+        [src]="track.album.images[0].url"
+        alt="{{ track.name }}"
+        width="50"
+        height="50"
+      />
+      <div>
+        <strong>{{ track.name }}</strong> - {{ track.artists[0].name }}
+        <audio controls>
+          <source [src]="track.preview_url" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </li>
+  </ul>
 </div>
+
 data-bs-ride="carousel"

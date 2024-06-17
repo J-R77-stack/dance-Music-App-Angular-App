@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MusicService } from '../../services/music.service';
+import { SpotifyService } from '../../services/spotify.service';
 
 @Component({
   selector: 'app-slider',
@@ -7,23 +7,18 @@ import { MusicService } from '../../services/music.service';
   styleUrl: './slider.component.scss',
 })
 export class SliderComponent implements OnInit {
-  topDeepHouseTracks: any[] = [];
-  // topSashaTracks: any[] = [];
-  // artistInfo: any[] = [];
+  artistId: string = '68vO4fkFxLbWPxTSHosxsB'; // Replace with the desired artist ID
+  topTracks: any[] = [];
 
-  constructor(private musicService: MusicService) {}
+  constructor(private spotifyService: SpotifyService) {}
 
   ngOnInit(): void {
-    this.musicService.getTopDeepHouseTracks().subscribe((data) => {
-      this.topDeepHouseTracks = data.tracks.track;
+    this.getTopTracks();
+  }
+
+  getTopTracks(): void {
+    this.spotifyService.getArtistTopTracks(this.artistId).subscribe((data) => {
+      this.topTracks = data;
     });
-
-    // this.musicService.getTopSashaTracks().subscribe((data) => {
-    //   this.topSashaTracks = data.toptracks.track;
-    // });
-
-    // this.musicService.getArtistInfo('artist: sasha').subscribe((data) => {
-    //   this.artistInfo = data.artist;
-    // });
   }
 }
