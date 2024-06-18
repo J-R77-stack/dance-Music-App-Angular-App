@@ -3,26 +3,32 @@
   class="carousel slide"
   *ngIf="topTracks.length"
 >
-  <div class="carousel-inner" *ngFor="let track of topTracks">
-    <div class="carousel-item active">
-      <img [src]="track.album.images[0].url" class="d-block w-100" alt="..." />
-    </div>
-    <div class="slide-pane">
-      <h2 class="title">
-        <strong>{{ track.name }}</strong>
-      </h2>
-      <div class="artist">{{ track.artists[0].name }}</div>
-      <div class="audio">
-        <audio controls class="audioControl">
-          <source [src]="track.preview_url" type="audio/mpeg" />
-          Your browser does not support the audio element.
-        </audio>
+  <div
+    class="carousel-inner"
+    *ngFor="let track of topTracks; let trackIndex = index"
+  >
+    <ng-container *ngIf="trackIndex === slideIndex">
+      <div class="carousel-item active">
+        <img
+          [src]="track.album.images[0].url"
+          class="d-block w-100"
+          alt="..."
+        />
       </div>
-    </div>
+      <div class="slide-pane">
+        <h2 class="title">
+          <strong>{{ track.name }}</strong>
+        </h2>
+        <div class="artist">{{ track.artists[0].name }}</div>
+        <div>
+          {{ track.album.href }}
+        </div>
+      </div>
+    </ng-container>
   </div>
 </div>
 
-<div>
+<!-- <div>
   <h2>Top Tracks</h2>
   <ul *ngIf="topTracks.length">
     <li *ngFor="let track of topTracks">
@@ -33,7 +39,8 @@
         height="50"
       />
       <div>
-        <strong>{{ track.name }}</strong> - {{ track.artists[0].name }}
+        <strong>{{ track.name }}</strong> - {{ track.artists[0].name }} -
+
         <audio controls>
           <source [src]="track.preview_url" type="audio/mpeg" />
           Your browser does not support the audio element.
@@ -46,7 +53,7 @@
 <div *ngIf="topTracks.length">
   <div *ngFor="let track of topTracks">
     {{ track.name }}
+    {{ track.album.artists.release_date }}
   </div>
-</div>
-
+</div> -->
 data-bs-ride="carousel"

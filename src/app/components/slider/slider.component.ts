@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SpotifyService } from '../../services/spotify.service';
+import { MusicDto } from '../../types/music';
 
 @Component({
   selector: 'app-slider',
@@ -14,6 +15,9 @@ export class SliderComponent implements OnInit {
 
   ngOnInit(): void {
     this.getTopTracks();
+    setInterval(() => {
+      this.slideIndex += 1;
+    }, 5000);
   }
 
   getTopTracks(): void {
@@ -21,4 +25,6 @@ export class SliderComponent implements OnInit {
       this.topTracks = data;
     });
   }
+
+  slideIndex = 0;
 }
