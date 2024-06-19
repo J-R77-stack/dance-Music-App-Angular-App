@@ -3,16 +3,13 @@
   class="carousel slide"
   *ngIf="topTracks.length"
 >
-  <div
-    class="carousel-inner"
-    *ngFor="let track of topTracks; let trackIndex = index"
-  >
-    <ng-container *ngIf="trackIndex === slideIndex">
+  <ng-container *ngFor="let track of topTracks; let trackIndex = index">
+    <div class="carousel-inner" *ngIf="trackIndex === slideIndex" @slideFade>
       <div class="carousel-item active">
         <img
           [src]="track.album.images[0].url"
           class="d-block w-100"
-          alt="..."
+          alt="track image"
         />
       </div>
       <div class="slide-pane">
@@ -21,11 +18,19 @@
         </h2>
         <div class="artist">{{ track.artists[0].name }}</div>
         <div>
-          {{ track.album.href }}
+          <button type="button" class="btn btn-light">
+            <a
+              href="{{ track.external_urls.spotify }}"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Play on Spotify</a
+            >
+          </button>
         </div>
       </div>
-    </ng-container>
-  </div>
+    </div>
+  </ng-container>
 </div>
 
 <!-- <div>

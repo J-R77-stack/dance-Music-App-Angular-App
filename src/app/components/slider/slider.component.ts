@@ -1,11 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { SpotifyService } from '../../services/spotify.service';
-import { MusicDto } from '../../types/music';
+import {
+  state,
+  trigger,
+  style,
+  transition,
+  animate,
+} from '@angular/animations';
 
 @Component({
   selector: 'app-slider',
   templateUrl: './slider.component.html',
   styleUrl: './slider.component.scss',
+  animations: [
+    trigger('slideFade', [
+      state('void', style({ opacity: 0 })),
+      transition('void <=> *', [animate('1s')]),
+    ]),
+  ],
 })
 export class SliderComponent implements OnInit {
   artistId: string = '68vO4fkFxLbWPxTSHosxsB'; // Replace with the desired artist ID
@@ -14,9 +26,16 @@ export class SliderComponent implements OnInit {
   constructor(private spotifyService: SpotifyService) {}
 
   ngOnInit(): void {
+    this.changeSlide();
+  }
+
+  changeSlide() {
     this.getTopTracks();
     setInterval(() => {
       this.slideIndex += 1;
+      if (this.slideIndex > 9) {
+        this.slideIndex = 0;
+      }
     }, 5000);
   }
 

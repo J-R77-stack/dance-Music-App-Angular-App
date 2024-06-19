@@ -1,7 +1,10 @@
 .carousel {
+  position: relative;
+  height: 35rem;
   .carousel-inner {
     width: 100%;
-    position: relative;
+    position: absolute;
+    height: 35rem;
     .carousel-item {
       height: 35rem;
       position: relative;
@@ -37,6 +40,14 @@
       }
       .artist {
         font-size: 1.2rem;
+      }
+      button {
+        background-color: blueviolet;
+        margin-top: 10px;
+        a {
+          color: white;
+          text-decoration: none;
+        }
       }
       .audio {
         margin-top: 10px;
