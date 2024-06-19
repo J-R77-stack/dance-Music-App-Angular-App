@@ -9,6 +9,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { MusicListComponent } from './pages/music-list/music-list.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BannerComponent } from './components/banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     MusicListComponent,
     SliderComponent,
+    BannerComponent,
   ],
   imports: [
     BrowserModule,
