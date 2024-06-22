@@ -1,18 +1,26 @@
-<div class="container-fluid text-center">
-  <div class="row bg-dark-subtle p-2">
-    <div class="col-12 col-sm-2 bg-info">
-      <a class="show-item">
-        <div class="-show-item-title">
-          <h3>Title</h3>
-        </div>
-        <div class="show-item-image">
+<div
+  class="container-fluid text-left"
+  *ngIf="topTracks.length"
+  style="height: 60rem"
+>
+  <h1 class="top-tracks">Top Tracks</h1>
+  <a href="">
+    <div class="row">
+      <div class="col-12 col-sm-2 mt-4" *ngFor="let track of topTracks">
+        <div class="card" style="height: 26rem">
           <img
-            src="https://i.scdn.co/image/ab67616d0000b273fc8b921c52cb60c029607fec"
-            alt=""
+            [src]="track.album.images[0].url"
+            class="card-img-top"
+            alt="..."
           />
+          <div class="card-body rounded-bottom-2">
+            <h5 class="card-title">{{ track.name }}</h5>
+            <p class="card-text">
+              {{ track.artists[0].name }}
+            </p>
+          </div>
         </div>
-        <div class="show-item-artist">artist</div>
-      </a>
+      </div>
     </div>
-  </div>
+  </a>
 </div>
