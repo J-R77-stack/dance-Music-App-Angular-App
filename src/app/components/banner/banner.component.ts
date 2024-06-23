@@ -15,7 +15,6 @@ export class BannerComponent implements OnInit {
   ngOnInit() {
     this.getTopTracks();
   }
-
   getTopTracks(): void {
     this.spotifyService.getArtistTopTracks(this.artistId).subscribe((data) => {
       this.topTracks = data;

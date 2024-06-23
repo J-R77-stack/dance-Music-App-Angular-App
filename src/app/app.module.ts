@@ -10,6 +10,7 @@ import { MusicListComponent } from './pages/music-list/music-list.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BannerComponent } from './components/banner/banner.component';
+import { MusicDetailComponent } from './pages/music-detail/music-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { BannerComponent } from './components/banner/banner.component';
     MusicListComponent,
     SliderComponent,
     BannerComponent,
+    MusicDetailComponent,
   ],
   imports: [
     BrowserModule,
