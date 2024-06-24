@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
 export class SpotifyService {
   private apiUrl = 'https://api.spotify.com/v1';
   private accessToken =
-    'BQB6BOsBs2-5GFTKRALT5vqiwN3W4tXUYYvPkMLx7m1vuBuxFv7FXZKfv1jQIjCgtkEmAhUtQXub0VgWR_1TvK1zQOTAwa9IuFL8cYu8SSFNlYG9sMI'; // Replace with your Spotify access token
+    'BQCqInqOzyk2q7V7VLa5J_k2id82UNWe2Zc-spoggiIlSqzU9bmCQ1ZHu8HZySwvHcRDHr2ox4pRLij9DlGPHvC8aNoeM4Jnkqi_8gD0GI9_tVyPaiE'; // Replace with your Spotify access token
 
   constructor(private http: HttpClient) {}
 
@@ -21,5 +21,12 @@ export class SpotifyService {
     return this.http
       .get(url, { headers })
       .pipe(map((response: any) => response.tracks));
+  }
+  getTrackById(id: string): Observable<any> {
+    const headers = new HttpHeaders({
+      Authorization: `Bearer ${this.accessToken}`,
+    });
+    const url = `${this.apiUrl}/tracks/${id}?market=US`;
+    return this.http.get(url, { headers });
   }
 }
