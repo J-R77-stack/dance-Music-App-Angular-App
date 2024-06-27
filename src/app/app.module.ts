@@ -11,6 +11,7 @@ import { SliderComponent } from './components/slider/slider.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BannerComponent } from './components/banner/banner.component';
 import { MusicDetailComponent } from './pages/music-detail/music-detail.component';
+import { TimGreenComponent } from './pages/tim-green/tim-green.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { MusicDetailComponent } from './pages/music-detail/music-detail.componen
     SliderComponent,
     BannerComponent,
     MusicDetailComponent,
+    TimGreenComponent,
   ],
   imports: [
     BrowserModule,

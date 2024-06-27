@@ -20,7 +20,7 @@ import {
   ],
 })
 export class SliderComponent implements OnInit {
-  artistId: string = '68vO4fkFxLbWPxTSHosxsB'; // Replace with the desired artist ID
+  artistId: string = '0334oJHhRSKJRHKpE9i62h'; // Replace with the desired artist ID
   topTracks: any[] = [];
 
   constructor(private spotifyService: SpotifyService) {}

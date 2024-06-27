@@ -1,1 +1,23 @@
-<p>music-list works!</p>
+<app-slider></app-slider>
+<div class="container-fluid text-left h-100" *ngIf="topTracks.length">
+  <h1 class="top-tracks">Tim Green Popular Tracks</h1>
+
+  <div class="row">
+    <a
+      class="col-12 col-sm-3 col-lg-3 col-xl-2 mt-2 mb-2"
+      *ngFor="let track of topTracks"
+      [routerLink]="'detail/' + track.id"
+    >
+      <div class="card h-100">
+        <img [src]="track.album.images[0].url" class="card-img-top" alt="..." />
+
+        <div class="card-body rounded-bottom-2">
+          <h5 class="card-title">{{ track.name }}</h5>
+          <p class="card-text">
+            {{ track.artists[0].name }}
+          </p>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

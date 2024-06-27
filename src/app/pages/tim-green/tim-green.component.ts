@@ -4,11 +4,11 @@ import { SpotifyService } from '../../services/spotify.service';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-music-detail',
-  templateUrl: './music-detail.component.html',
-  styleUrl: './music-detail.component.scss',
+  selector: 'app-tim-green',
+  templateUrl: './tim-green.component.html',
+  styleUrl: './tim-green.component.scss',
 })
-export class MusicDetailComponent implements OnInit {
+export class TimGreenComponent implements OnInit {
   trackId = '';
   artist: any;
 
