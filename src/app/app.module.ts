@@ -12,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { BannerComponent } from './components/banner/banner.component';
 import { MusicDetailComponent } from './pages/music-detail/music-detail.component';
 import { TimGreenComponent } from './pages/tim-green/tim-green.component';
+import { SashaComponent } from './pages/sasha/sasha.component';
+import { SashaListComponent } from './pages/sasha-list/sasha-list.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { TimGreenComponent } from './pages/tim-green/tim-green.component';
     BannerComponent,
     MusicDetailComponent,
     TimGreenComponent,
+    SashaComponent,
+    SashaListComponent,
   ],
   imports: [
     BrowserModule,
