@@ -14,6 +14,8 @@ import { MusicDetailComponent } from './pages/music-detail/music-detail.componen
 import { TimGreenComponent } from './pages/tim-green/tim-green.component';
 import { SashaComponent } from './pages/sasha/sasha.component';
 import { SashaListComponent } from './pages/sasha-list/sasha-list.component';
+import { DekayComponent } from './pages/dekay/dekay.component';
+import { DekayListComponent } from './pages/dekay-list/dekay-list.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { SashaListComponent } from './pages/sasha-list/sasha-list.component';
     TimGreenComponent,
     SashaComponent,
     SashaListComponent,
+    DekayComponent,
+    DekayListComponent,
   ],
   imports: [
     BrowserModule,
