@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
 export class SpotifyService {
   private apiUrl = 'https://api.spotify.com/v1';
   private accessToken =
-    'BQBrM91WOihZ92F9doyh8gCIg2z4wyVtA8uBJbuXPT48mL1XWoE_J85GgZDHLYxc3oAAEIBBm4pYfNEEef-B4yjCWEWeUdXSuP2H35v91lYj6xNWAj0'; // Replace with your Spotify access token
+    'BQBwZxUl-SEgqv7B92GjYf-BFoolC5tyf9O-hoTvOCUISMny567QqbcUgGFLbcZoacnFtG-E5eD-v49DaY5YD-uh9lNa56uycv8vkchVzJv-Mii6dPw'; // Replace with your Spotify access token
 
   constructor(private http: HttpClient) {}
 
