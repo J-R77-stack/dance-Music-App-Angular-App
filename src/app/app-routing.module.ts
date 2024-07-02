@@ -8,6 +8,7 @@ import { SashaComponent } from './pages/sasha/sasha.component';
 import { SashaListComponent } from './pages/sasha-list/sasha-list.component';
 import { DekayComponent } from './pages/dekay/dekay.component';
 import { DekayListComponent } from './pages/dekay-list/dekay-list.component';
+import { CallbackComponent } from './components/callback/callback.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,6 +19,8 @@ const routes: Routes = [
   { path: 'sasha/detail/:id', component: SashaListComponent },
   { path: 'dekay', component: DekayComponent },
   { path: 'dekay/detail/:id', component: DekayListComponent },
+  { path: 'callback', component: CallbackComponent },
+  { path: '**', redirectTo: 'callback' },
 ];
 
 @NgModule({
