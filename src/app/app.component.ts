@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { SpotifyAuthService } from './services/spotify-auth.service';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +7,4 @@ import { SpotifyAuthService } from './services/spotify-auth.service';
 })
 export class AppComponent {
   title = 'danceMusicApp';
-  constructor(private spotifyAuth: SpotifyAuthService) {}
-
-  authorize() {
-    this.spotifyAuth.authorize();
-  }
 }
