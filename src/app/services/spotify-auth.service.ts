@@ -93,7 +93,7 @@ export class SpotifyAuthService {
   fetchArtistPlaylists(playlistId: string): Observable<any> {
     const url = `
     https://api.spotify.com/v1/playlists/${playlistId}/tracks?limit=12`;
-    const params = new HttpParams().set('market', 'ES');
+    const params = new HttpParams().set('market', 'US');
     return this.http.get(url, {
       headers: {
         Authorization: `Bearer ${this.accessToken.getValue()}`,
@@ -101,4 +101,5 @@ export class SpotifyAuthService {
       params,
     });
   }
+ 
 }

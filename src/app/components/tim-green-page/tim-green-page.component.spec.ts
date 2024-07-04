@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MusicDetailComponent } from './music-detail.component';
+import { TimGreenPageComponent } from './tim-green-page.component';
 
-describe('MusicDetailComponent', () => {
-  let component: MusicDetailComponent;
-  let fixture: ComponentFixture<MusicDetailComponent>;
+describe('TimGreenPageComponent', () => {
+  let component: TimGreenPageComponent;
+  let fixture: ComponentFixture<TimGreenPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [MusicDetailComponent]
+      declarations: [TimGreenPageComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(MusicDetailComponent);
+    fixture = TestBed.createComponent(TimGreenPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

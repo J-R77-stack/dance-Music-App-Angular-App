@@ -6,18 +6,13 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
-import { MusicListComponent } from './pages/music-list/music-list.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BannerComponent } from './components/banner/banner.component';
-import { MusicDetailComponent } from './pages/music-detail/music-detail.component';
-import { TimGreenComponent } from './pages/tim-green/tim-green.component';
-import { SashaComponent } from './pages/sasha/sasha.component';
-import { SashaListComponent } from './pages/sasha-list/sasha-list.component';
-import { DekayComponent } from './pages/dekay/dekay.component';
-import { DekayListComponent } from './pages/dekay-list/dekay-list.component';
+
 import { CallbackComponent } from './components/callback/callback.component';
 import { LeeTopTracksComponent } from './components/lee-top-tracks/lee-top-tracks.component';
+import { TimGreenPageComponent } from './components/tim-green-page/tim-green-page.component';
 
 @NgModule({
   declarations: [
@@ -25,17 +20,11 @@ import { LeeTopTracksComponent } from './components/lee-top-tracks/lee-top-track
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    MusicListComponent,
     SliderComponent,
     BannerComponent,
-    MusicDetailComponent,
-    TimGreenComponent,
-    SashaComponent,
-    SashaListComponent,
-    DekayComponent,
-    DekayListComponent,
     CallbackComponent,
     LeeTopTracksComponent,
+    TimGreenPageComponent,
   ],
   imports: [
     BrowserModule,
