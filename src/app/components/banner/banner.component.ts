@@ -7,8 +7,7 @@ import { SpotifyAuthService } from '../../services/spotify-auth.service';
   styleUrl: './banner.component.scss',
 })
 export class BannerComponent implements OnInit {
-  // artistId: string = '0334oJHhRSKJRHKpE9i62h'; // Replace with the desired artist ID
-  // topTracks: any[] = [];
+ 
   playlistItems: any[] = [];
   playlistId = '7wvAlhvMMJKMkGFUxcLSmj';
 

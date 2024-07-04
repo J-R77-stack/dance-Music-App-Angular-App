@@ -17,6 +17,7 @@ import { SashaListComponent } from './pages/sasha-list/sasha-list.component';
 import { DekayComponent } from './pages/dekay/dekay.component';
 import { DekayListComponent } from './pages/dekay-list/dekay-list.component';
 import { CallbackComponent } from './components/callback/callback.component';
+import { LeeTopTracksComponent } from './components/lee-top-tracks/lee-top-tracks.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { CallbackComponent } from './components/callback/callback.component';
     DekayComponent,
     DekayListComponent,
     CallbackComponent,
+    LeeTopTracksComponent,
   ],
   imports: [
     BrowserModule,
