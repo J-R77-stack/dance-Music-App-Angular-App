@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { SpotifyService } from '../../services/spotify.service';
+import { SpotifyAuthService } from '../../services/spotify-auth.service';
 import {
   state,
   trigger,
@@ -23,7 +23,7 @@ export class SliderComponent implements OnInit {
   artistId: string = '0334oJHhRSKJRHKpE9i62h'; // Replace with the desired artist ID
   topTracks: any[] = [];
 
-  constructor(private spotifyService: SpotifyService) {}
+  constructor(private spotifyAuth: SpotifyAuthService) {}
 
   ngOnInit(): void {
     this.changeSlide();
@@ -40,8 +40,14 @@ export class SliderComponent implements OnInit {
   }
 
   getTopTracks(): void {
-    this.spotifyService.getArtistTopTracks(this.artistId).subscribe((data) => {
-      this.topTracks = data;
+    this.spotifyAuth.getAccessToken().subscribe((token) => {
+      if (token) {
+        this.spotifyAuth
+          .fetchArtistTopTracks(this.artistId)
+          .subscribe((data: any) => {
+            this.topTracks = data.tracks;
+          });
+      }
     });
   }
 
