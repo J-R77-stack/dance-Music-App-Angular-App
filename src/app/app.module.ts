@@ -13,6 +13,9 @@ import { BannerComponent } from './components/banner/banner.component';
 import { CallbackComponent } from './components/callback/callback.component';
 import { LeeTopTracksComponent } from './components/lee-top-tracks/lee-top-tracks.component';
 import { TimGreenPageComponent } from './components/tim-green-page/tim-green-page.component';
+import { SashaPageComponent } from './components/sasha-page/sasha-page.component';
+import { TimGreenComponent } from './pages/tim-green/tim-green.component';
+import { SashaComponent } from './pages/sasha/sasha.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,9 @@ import { TimGreenPageComponent } from './components/tim-green-page/tim-green-pag
     CallbackComponent,
     LeeTopTracksComponent,
     TimGreenPageComponent,
+    SashaPageComponent,
+    TimGreenComponent,
+    SashaComponent,
   ],
   imports: [
     BrowserModule,
