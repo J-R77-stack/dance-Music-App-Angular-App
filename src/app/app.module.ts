@@ -16,6 +16,8 @@ import { TimGreenPageComponent } from './components/tim-green-page/tim-green-pag
 import { SashaPageComponent } from './components/sasha-page/sasha-page.component';
 import { TimGreenComponent } from './pages/tim-green/tim-green.component';
 import { SashaComponent } from './pages/sasha/sasha.component';
+import { TimGreenTopTracksComponent } from './components/tim-green-top-tracks/tim-green-top-tracks.component';
+import { SashaTopTracksComponent } from './components/sasha-top-tracks/sasha-top-tracks.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { SashaComponent } from './pages/sasha/sasha.component';
     SashaPageComponent,
     TimGreenComponent,
     SashaComponent,
+    TimGreenTopTracksComponent,
+    SashaTopTracksComponent,
   ],
   imports: [
     BrowserModule,

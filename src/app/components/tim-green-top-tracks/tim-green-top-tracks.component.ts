@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 import { SpotifyAuthService } from '../../services/spotify-auth.service';
 
 @Component({
-  selector: 'app-lee-top-tracks',
-  templateUrl: './lee-top-tracks.component.html',
-  styleUrl: './lee-top-tracks.component.scss',
+  selector: 'app-tim-green-top-tracks',
+  templateUrl: './tim-green-top-tracks.component.html',
+  styleUrl: './tim-green-top-tracks.component.scss',
 })
-export class LeeTopTracksComponent {
+export class TimGreenTopTracksComponent {
   topTracks: any[] = [];
-  artistId = '0334oJHhRSKJRHKpE9i62h';
+  artistId = '68vO4fkFxLbWPxTSHosxsB';
 
   constructor(private spotifyAuth: SpotifyAuthService) {}
 
