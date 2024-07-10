@@ -20,6 +20,9 @@ import { TimGreenTopTracksComponent } from './components/tim-green-top-tracks/ti
 import { SashaTopTracksComponent } from './components/sasha-top-tracks/sasha-top-tracks.component';
 import { MDekayComponent } from './pages/m-dekay/m-dekay.component';
 import { DekayTopTracksComponent } from './components/dekay-top-tracks/dekay-top-tracks.component';
+import { SliderGreenComponent } from './components/slider-green/slider-green.component';
+import { SliderSashaComponent } from './components/slider-sasha/slider-sasha.component';
+import { SliderDekayComponent } from './components/slider-dekay/slider-dekay.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +42,9 @@ import { DekayTopTracksComponent } from './components/dekay-top-tracks/dekay-top
     SashaTopTracksComponent,
     MDekayComponent,
     DekayTopTracksComponent,
+    SliderGreenComponent,
+    SliderSashaComponent,
+    SliderDekayComponent,
   ],
   imports: [
     BrowserModule,

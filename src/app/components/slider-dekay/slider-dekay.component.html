@@ -1,0 +1,37 @@
+<div
+  id="carouselExampleAutoplaying"
+  class="carousel slide"
+  *ngIf="playlistItems.length"
+>
+  <ng-container *ngFor="let item of playlistItems; let trackIndex = index">
+    <div class="carousel-inner" *ngIf="trackIndex === slideIndex" @slideFade>
+      <div class="carousel-item active">
+        <img
+          [src]="item.track.album.images[0].url"
+          class="d-block w-100"
+          alt="track image"
+        />
+      </div>
+      <div class="slide-pane">
+        <h2 class="title">
+          <strong>{{ item.track.name }}</strong>
+        </h2>
+        <div class="artist">{{ item.track.artists[0].name }}</div>
+        <div>
+          <button type="button" class="btn btn-light">
+            <a
+              href="{{ item.track.external_urls.spotify }}"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Play on Spotify</a
+            >
+          </button>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+
+
+
