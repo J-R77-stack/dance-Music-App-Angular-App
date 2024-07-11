@@ -4,13 +4,14 @@ import { Router } from '@angular/router';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { sha256 } from 'js-sha256';
 import { encode as base64encode } from 'base64-arraybuffer';
+import { environment } from '../../environments/environment.prod';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SpotifyAuthService {
-  private clientId = '7a31dab292244ff9ac0a830ba5142c6f';
-  private redirectUri = 'http://localhost:4200/callback';
+  private clientId = 'environment.spotifyClientId';
+  private redirectUri = 'environment.spotifyRedirectUri';
   private authUrl = 'https://accounts.spotify.com/authorize';
   private tokenUrl = 'https://accounts.spotify.com/api/token';
   private accessToken = new BehaviorSubject<string | null>(null);
@@ -101,5 +102,4 @@ export class SpotifyAuthService {
       params,
     });
   }
- 
 }
