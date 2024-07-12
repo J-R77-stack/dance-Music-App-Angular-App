@@ -10,8 +10,8 @@ import { environment } from '../../environments/environment.prod';
   providedIn: 'root',
 })
 export class SpotifyAuthService {
-  private clientId = 'environment.spotifyClientId';
-  private redirectUri = 'environment.spotifyRedirectUri';
+  private clientId = environment.spotifyClientId;
+  private redirectUri = environment.spotifyRedirectUri;
   private authUrl = 'https://accounts.spotify.com/authorize';
   private tokenUrl = 'https://accounts.spotify.com/api/token';
   private accessToken = new BehaviorSubject<string | null>(null);
