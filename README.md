@@ -30,12 +30,15 @@ Users should be able to:
 
 ### Screenshots
 
+Header
 ![](src/assets/images/screenshots/header.png)
+Spin me button to authenticate with the Spotify Api
+![](src/assets/images/screenshots/spin-auth-button.png)
 
 ### Links
 
-- Code URL: [Add solution URL here](https://github.com/J-R77-stack/dance-Music-App-Angular-App)
-- Live Site URL: [Add live site URL here](https://dance-music-app-angular-app.vercel.app/)
+- Code URL: [Dance Music App Code on Git hub](https://github.com/J-R77-stack/dance-Music-App-Angular-App)
+- Live Site URL: [ Dance Music App live site](https://dance-music-app-angular-app.vercel.app/)
 
 ## My process
 
