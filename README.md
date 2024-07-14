@@ -32,6 +32,7 @@ Users should be able to:
 
 Header
 ![](src/assets/images/screenshots/header.png)
+
 Spin me button to authenticate with the Spotify Api
 ![](src/assets/images/screenshots/spin-auth-button.png)
 
