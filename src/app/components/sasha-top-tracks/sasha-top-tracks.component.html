@@ -1,36 +1,35 @@
 <div class="container-fluid text-left h-100" *ngIf="topTracks.length > 0">
-    <h1 class="top-tracks">Sasha Top Tracks</h1>
-  
-    <div class="row">
-      <a
-        class="col-12 col-sm-3 col-lg-3 col-xl-2 mt-2 mb-2"
-        *ngFor="let track of topTracks"
-        href="{{ track.external_urls.spotify }}"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div class="card h-100">
+  <h1 class="top-tracks">Sasha Top Tracks</h1>
+
+  <div class="row">
+    <div
+      class="col-12 col-sm-3 col-lg-3 col-xl-2 mt-2 mb-2"
+      *ngFor="let track of topTracks"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <div class="card h-100">
+        <a href="{{ track.external_urls.spotify }}">
           <img
             [src]="track.album.images[0]?.url"
             class="card-img-top"
             alt="{{ track.name }}"
           />
-  
-          <div class="card-body rounded-bottom-2">
-            <h5 class="card-title">{{ track.name }}</h5>
-            <p class="card-text">
-              {{ track.artists[0].name }}
-            </p>
-            <div>
-              <audio class="custom-audio" controls>
-                <source [src]="track.preview_url" type="audio/mpeg" />
-                Your browser does not support the audio element.
-              </audio>
-            </div>
+        </a>
+
+        <div class="card-body rounded-bottom-2">
+          <h5 class="card-title">{{ track.name }}</h5>
+          <p class="card-text">
+            {{ track.artists[0].name }}
+          </p>
+          <div>
+            <audio class="custom-audio" controls>
+              <source [src]="track.preview_url" type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
           </div>
         </div>
-      </a>
+      </div>
     </div>
   </div>
-  
-
+</div>
