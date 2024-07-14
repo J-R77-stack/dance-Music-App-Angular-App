@@ -30,11 +30,11 @@ Users should be able to:
 
 ### Screenshots
 
-Header
-![](src/assets/images/screenshots/header.png)
+- Header.
+  ![](src/assets/images/screenshots/header.png)
 
-Spin me button to authenticate with the Spotify Api
-![](src/assets/images/screenshots/spin-auth-button.png)
+- Spin me button to authenticate with the Spotify Api.
+  ![](src/assets/images/screenshots/spin-auth-button.png)
 
 ### Links
 
