@@ -33,6 +33,9 @@ Users should be able to:
 - Header with Spin me button to authenticate with the Spotify Api.
   ![](src/assets/images/screenshots/header.png)
 
+- Slider Component.
+  ![](src/assets/images/screenshots/slider.png)
+
 ### Links
 
 - Code URL: [Dance Music App Code on Git hub](https://github.com/J-R77-stack/dance-Music-App-Angular-App)
