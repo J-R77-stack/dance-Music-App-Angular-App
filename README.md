@@ -64,19 +64,21 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
+- scss styles
+- Bootstrap 5
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [Spotify API](https://developer.spotify.com/)
+- [Angular](https://angular.dev/)
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This was a very difficult project and I spent countless hours trying different things and reading stuff online and also researching the spotify docs to find the information I needed, Somehow after much perseverance I managed to get the app working using various bits of information jumbled together.
+
+The Spotify API provides access to user related data, like playlists and music. The base address of Web API is https://api.spotify.com. The API provides a set of endpoints, each with its own unique path. All requests to Web API require authentication. This is achieved by sending a valid OAuth access token in the request header.
+
+In order to centralize requests to Spotify, I have created a Service called spotify-auth.service.ts, in which I used the PKCE extension to keep my 'client secret' a secret. I created a spotify app in the api to obtain a 'client secret and client id'. This then allowed me to obtain a new access token whenever I made get requests to the api. I then set up the redirect URI to “http://localhost:4200/callback” for development and 'https://dance-music-app-angular-app.vercel.app/callback' for production.
+
+I installed sha.js which will be used to hash with Sha256 which is needed for PKCE in the spotify-auth.service.ts. It allowed me to get a new access token everytime i authenticated with the spotify api instead of having to manually insert it every hour.
 
 To see how you can add code snippets, see below:
 
