@@ -14,7 +14,6 @@ I’m so happy to finally finish the first version of the Angular project I have
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -73,58 +72,30 @@ Users should be able to:
 ### What I learned
 
 This was a very difficult project and I spent countless hours trying different things and reading stuff online and also researching the spotify docs to find the information I needed, Somehow after much perseverance I managed to get the app working using various bits of information jumbled together.
+which I will share at the botton of the page.
 
 The Spotify API provides access to user related data, like playlists and music. The base address of Web API is https://api.spotify.com. The API provides a set of endpoints, each with its own unique path. All requests to Web API require authentication. This is achieved by sending a valid OAuth access token in the request header.
 
 In order to centralize requests to Spotify, I have created a Service called spotify-auth.service.ts, in which I used the PKCE extension to keep my 'client secret' a secret. I created a spotify app in the api to obtain a 'client secret and client id'. This then allowed me to obtain a new access token whenever I made get requests to the api. I then set up the redirect URI to “http://localhost:4200/callback” for development and 'https://dance-music-app-angular-app.vercel.app/callback' for production.
 
-I installed sha.js which will be used to hash with Sha256 which is needed for PKCE in the spotify-auth.service.ts. It allowed me to get a new access token everytime i authenticated with the spotify api instead of having to manually insert it every hour.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+I installed sha.js which will be used to hash with Sha256 which is needed for PKCE in the spotify-auth.service.ts. It allowed me to get a new access token everytime i authenticated with the spotify api instead of having to manually insert it every hour
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+- Imporve the app to include a search function and maybe add more artists. Also add artist pictures and tour dates and possibly videos of latests sets in interesting places.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+- Continue my Angular journey
 
-### Useful resources
+### Useful resources thant helpped me with the spotify API
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Spotify Api Documentation](https://developer.spotify.com/documentation/web-api) - This helped me to understand the basics of working with the api
+- [Angular Tutorial](https://danielmccannsayles.medium.com/angular-tutorial-spotify-oauth2-authorization-code-flow-with-pkce-bbe9ecc3680a) - This is an amazing article which helped me finally understand how to use the Spotify OAuth2 Authorization Code Flow with PKCE I'd recommend it to anyone still learning this concept.
+- [ Connecting to the Spotify Api ](https://ritvikbiswas.medium.com/connecting-to-the-spotify-api-using-node-js-and-axios-client-credentials-flow-c769e2bee818) - This was also a great article which helped me to understand the basics of working with the api
+- [w3schools](https://www.w3schools.com/) - A great webpage for someone beginning their journey with code.
+- [stackoverflow](https://stackoverflow.com/) - Another very useful site.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [Johnny Ramsay](https://my-portfolio-nu-two-52.vercel.app/)
+- Frontend Mentor - [@J-R77-stack](https://www.frontendmentor.io/profile/J-R77-stack)
+- Linkedin - [@johnny-ramsay](https://www.linkedin.com/in/johnny-ramsay-developer/)
