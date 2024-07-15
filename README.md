@@ -36,6 +36,24 @@ Users should be able to:
 - Slider Component.
   ![](src/assets/images/screenshots/slider.png)
 
+- Screen to auth app with spotify
+  ![](src/assets/images/screenshots/Auth-spotify.png)
+
+- Artist playlist component
+  ![](src/assets/images/screenshots/playlist.png)
+
+- Artist top track component
+  ![](src/assets/images/screenshots/topTrack.png)
+
+- Footer component
+  ![](src/assets/images/screenshots/footer.png)
+
+- small and medium screen nav bar
+  ![](src/assets/images/screenshots/nav1.png)
+
+- small and medium screen nav bar
+  ![](src/assets/images/screenshots/nav2.png)
+
 ### Links
 
 - Code URL: [Dance Music App Code on Git hub](https://github.com/J-R77-stack/dance-Music-App-Angular-App)
