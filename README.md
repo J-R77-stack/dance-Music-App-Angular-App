@@ -53,7 +53,7 @@ Users should be able to:
 - small and medium screen nav bar
   ![](src/assets/images/screenshots/nav2.png)
 
-### Links
+### Links (To view the live site please email me at johnnyramsay81@gmail.com for a password. Thankyou)
 
 - Code URL: [Dance Music App Code on Git hub](https://github.com/J-R77-stack/dance-Music-App-Angular-App)
 - Live Site URL: [ Dance Music App live site](https://dance-music-app-angular-app.vercel.app/)
